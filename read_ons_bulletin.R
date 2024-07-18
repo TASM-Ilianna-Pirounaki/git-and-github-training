@@ -3,7 +3,9 @@
 #Set up a function to neatly read the file in
 read_release <- function(){
   #Read all HTML
-  pg <- read_html("https://www.ons.gov.uk/")
+
+  pg <- read_html("https://www.ons.gov.uk/peoplepopulationandcommunity/")
+
  
   ##Keep the text content only
   text_only <- html_text(html_nodes(pg,'p'))
@@ -17,12 +19,16 @@ read_release <- function(){
 }
 
 ##Get latest ONS HTML release------------------------------------------------
-
+#This produces a list
 #Set up a function to neatly read the file in
 read_dates <- function(){
 
   #Read all HTML
+<<<<<<< HEAD
   pg <- read_html("https://www.ons.gov.uk")
+=======
+  pg <- read_html("https://www.ons.gov.uk/peoplepopulationandcommunity/")
+>>>>>>> dev
   
   ##Keep the text content only
   text_only <- html_text(html_nodes(pg,'p'))
